@@ -31,6 +31,6 @@ public class Logement {
         System.out.print("L'hôte de ce logement est : ");
         hote.afficher();
         System.out.println("Le logement est situé " + adresse + ".");
-        System.out.print("Superficie : " + superficie + "m2");
+        System.out.println("Superficie : " + superficie + "m2");
     }
 }
