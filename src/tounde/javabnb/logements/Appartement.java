@@ -18,11 +18,15 @@ public class Appartement extends Logement {
         super.afficher();
         String suffix = (numeroEtage == 1) ? "er" : "eme";
 
+        System.out.print("Le logement est situé " + getAdresse() + ",");
+
         if (numeroEtage <= 0) {
-            System.out.println("au rez-de-chaussé.");
+            System.out.print(" au rez-de-chaussé.");
         } else {
-            System.out.println(numeroEtage + suffix + " étage");
+            System.out.println(" au " + numeroEtage + suffix + " étage.");
         }
+
+        System.out.println("Superficie : " + getSuperficie() + "m2");
 
         if (superficieBalccon <= 0) {
             System.out.println("Balcon : Non");
