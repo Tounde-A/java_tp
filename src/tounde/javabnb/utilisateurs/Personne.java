@@ -15,4 +15,9 @@ public class Personne {
     public void afficher() {
         System.out.print(prenom + " " + nom + " (" + age + " ans)");
     }
+
+    @Override
+    public String toString() {
+        return prenom + " " + nom + " (" + age + " ans)";
+    }
 }
