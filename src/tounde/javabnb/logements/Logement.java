@@ -3,7 +3,7 @@ package tounde.javabnb.logements;
 import tounde.javabnb.utilisateurs.Hote;
 import tounde.javabnb.utilisateurs.Personne;
 
-public class Logement {
+public abstract class Logement {
 
     private Hote hote;
     private int tarifParNuit;
@@ -18,6 +18,8 @@ public class Logement {
         superficie = paramSuperficie;
         nbVoyageursMax = paramNbVoyageursMax;
     }
+
+    public void afficher() {}
 
     public Hote getHote() {
         return hote;
@@ -41,10 +43,5 @@ public class Logement {
 
     public int getNbVoyageursMax() {
         return nbVoyageursMax;
-    }
-
-    public void afficher() {
-        System.out.print("L'hôte est : ");
-        hote.afficher();
     }
 }
