@@ -19,6 +19,10 @@ public class Logement {
         nbVoyageursMax = paramNbVoyageursMax;
     }
 
+    public Hote getHote() {
+        return hote;
+    }
+
     public int getTarifParNuit() {
         if (tarifParNuit < 0) {
             return 0;
@@ -27,10 +31,20 @@ public class Logement {
         }
     }
 
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public int getSuperficie() {
+        return superficie;
+    }
+
+    public int getNbVoyageursMax() {
+        return nbVoyageursMax;
+    }
+
     public void afficher() {
-        System.out.print("L'hôte de ce logement est : ");
+        System.out.print("L'hôte est : ");
         hote.afficher();
-        System.out.println("Le logement est situé " + adresse + ".");
-        System.out.println("Superficie : " + superficie + "m2");
     }
 }
