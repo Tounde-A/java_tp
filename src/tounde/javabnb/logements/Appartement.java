@@ -15,8 +15,7 @@ public class Appartement extends Logement {
 
     @Override
     public void afficher() {
-        super.afficher();
-        System.out.println("L'hôte est : " + getHote());
+        System.out.println(getHote());
         System.out.print("Le logement est situé " + getAdresse() + ",");
 
         String suffix = (numeroEtage == 1) ? "er" : "eme";

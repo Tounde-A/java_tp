@@ -1,5 +1,6 @@
 package tounde.javabnb.logements;
 
+import tounde.javabnb.reservations.Reservable;
 import tounde.javabnb.utilisateurs.Hote;
 import tounde.javabnb.utilisateurs.Personne;
 
@@ -19,7 +20,7 @@ public abstract class Logement {
         nbVoyageursMax = paramNbVoyageursMax;
     }
 
-    public void afficher() {}
+    public abstract void afficher();
 
     public Hote getHote() {
         return hote;
