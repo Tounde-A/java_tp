@@ -8,7 +8,6 @@ import static tounde.javabnb.outils.Utile.formaterDate;
 
 public class SejourLong extends Sejour {
 
-    private Logement logement;
     private int prix;
     private int promotion;
     private final int PROMOTION_EN_POURCENTAGE;
@@ -16,10 +15,9 @@ public class SejourLong extends Sejour {
 
     public SejourLong(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs, int paramPromotionEnPourcentage) {
         super(paramDateArrivee, paramNbNuits, paramLogement, paramNbVoyageurs);
-        logement = paramLogement;
         PROMOTION_EN_POURCENTAGE = paramPromotionEnPourcentage;
 
-        int prixInitial = getNbNuits() * logement.getTarifParNuit();
+        int prixInitial = getNbNuits() * getLogement().getTarifParNuit();
         promotion = prixInitial * PROMOTION_EN_POURCENTAGE / 100;
         prix = prixInitial - promotion;
     }
