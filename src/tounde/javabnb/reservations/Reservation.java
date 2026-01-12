@@ -21,7 +21,8 @@ public class Reservation {
 
     public void afficher() {
         System.out.println("Date de la réservation : " + formaterDate(dateDeReservation));
-        System.out.println("Voyageur : " + voyageur);
+        System.out.print("Voyageur : ");
+        voyageur.afficher();
         System.out.print("A réservé chez ");
         objetReservable.afficher();
     }

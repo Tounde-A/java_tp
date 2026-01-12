@@ -15,7 +15,7 @@ public class Maison extends Logement {
 
     @Override
     public void afficher() {
-        System.out.println(getHote());
+        getHote().afficher();
         System.out.println("Le logement est une maison située " + getAdresse() + ".");
         System.out.println("Superficie : " + getSuperficie() + "m2");
 

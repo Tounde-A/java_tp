@@ -15,12 +15,12 @@ public class Appartement extends Logement {
 
     @Override
     public void afficher() {
-        System.out.println(getHote());
+        getHote().afficher();
         System.out.print("Le logement est situé " + getAdresse() + ",");
 
         String suffix = (numeroEtage == 1) ? "er" : "eme";
         if (numeroEtage <= 0) {
-            System.out.print(" au rez-de-chaussé.");
+            System.out.println(" au rez-de-chaussé.");
         } else {
             System.out.println(" au " + numeroEtage + suffix + " étage.");
         }
