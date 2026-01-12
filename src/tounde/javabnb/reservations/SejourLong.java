@@ -17,7 +17,7 @@ public class SejourLong extends Sejour {
         super(paramDateArrivee, paramNbNuits, paramLogement, paramNbVoyageurs);
         PROMOTION_EN_POURCENTAGE = paramPromotionEnPourcentage;
 
-        int prixInitial = getNbNuits() * getLogement().getTarifParNuit();
+        int prixInitial = getNbNuits() * paramLogement.getTarifParNuit();
         promotion = prixInitial * PROMOTION_EN_POURCENTAGE / 100;
         prix = prixInitial - promotion;
     }
