@@ -11,7 +11,7 @@ public class SejourCourt extends Sejour{
     private Logement logement;
     private int prix;
 
-    public SejourCourt(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs) {
+    SejourCourt(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs) {
         super(paramDateArrivee, paramNbNuits, paramLogement, paramNbVoyageurs);
         logement = paramLogement;
     }

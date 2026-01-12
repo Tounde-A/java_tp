@@ -3,10 +3,7 @@ package tounde.javabnb;
 import tounde.javabnb.logements.Appartement;
 import tounde.javabnb.logements.Logement;
 import tounde.javabnb.logements.Maison;
-import tounde.javabnb.reservations.Reservable;
-import tounde.javabnb.reservations.Reservation;
-import tounde.javabnb.reservations.Sejour;
-import tounde.javabnb.reservations.SejourLong;
+import tounde.javabnb.reservations.*;
 import tounde.javabnb.utilisateurs.Hote;
 import tounde.javabnb.utilisateurs.Personne;
 import tounde.javabnb.utilisateurs.Voyageur;
@@ -44,10 +41,11 @@ public class Main {
 
         Date maDate3 = new Date(126, Calendar.JULY, 2);
         Voyageur voyageur1 = new Voyageur("Sandra", "Wood", 30);
-        SejourLong monSejourLong1 = new SejourLong(maDate3, 7, appartement1, 3, 20);
-
+        //SejourLong monSejourLong1 = new SejourLong(maDate3, 7, appartement1, 3);
         //Reservation maReservation1 = new Reservation(monSejour3, voyageur1);
-        Reservation maReservation2 = new Reservation(monSejourLong1, voyageur1);
+
+        Sejour sejour = SejourFactory.createSejour(maDate3, 7, appartement1, 3);
+        Reservation maReservation2 = new Reservation(sejour, voyageur1);
 
         //System.out.println(" ");
         //monSejour1.afficher();

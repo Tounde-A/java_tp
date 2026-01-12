@@ -10,12 +10,11 @@ public class SejourLong extends Sejour {
 
     private Logement logement;
     private int promotion;
-    private final int PROMOTION_EN_POURCENTAGE;
+    private final int PROMOTION_EN_POURCENTAGE = 20;
 
 
-    public SejourLong(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs, int paramPromotionEnPourcentage) {
+    SejourLong(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs) {
         super(paramDateArrivee, paramNbNuits, paramLogement, paramNbVoyageurs);
-        PROMOTION_EN_POURCENTAGE = paramPromotionEnPourcentage;
         logement = paramLogement;
 
         int prixInitial = getNbNuits() * paramLogement.getTarifParNuit();
