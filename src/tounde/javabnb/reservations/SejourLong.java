@@ -6,17 +6,22 @@ import java.util.Date;
 
 import static tounde.javabnb.outils.Utile.formaterDate;
 
-public class SejourLong extends Sejour{
+public class SejourLong extends Sejour {
 
     private Logement logement;
-    private double promotion;
-    private double promotionEnPourcentage;
+    private int prix;
+    private int promotion;
+    private final int PROMOTION_EN_POURCENTAGE;
 
 
-    public SejourLong(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs, double paramPromotionEnPourcentage) {
+    public SejourLong(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs, int paramPromotionEnPourcentage) {
         super(paramDateArrivee, paramNbNuits, paramLogement, paramNbVoyageurs);
         logement = paramLogement;
-        promotionEnPourcentage = paramPromotionEnPourcentage;
+        PROMOTION_EN_POURCENTAGE = paramPromotionEnPourcentage;
+
+        int prixInitial = getNbNuits() * logement.getTarifParNuit();
+        promotion = prixInitial * PROMOTION_EN_POURCENTAGE / 100;
+        prix = prixInitial - promotion;
     }
 
     @Override
@@ -26,15 +31,8 @@ public class SejourLong extends Sejour{
 
     @Override
     public void afficher() {
-        int prixTotal = getNbNuits() * logement.getTarifParNuit();
-
-        promotion = prixTotal * promotionEnPourcentage;
-        int promotionFormatee = (int) promotion;
-
-        double reduction = prixTotal - promotionFormatee;
-        int reductionFormatee = (int) reduction;
 
         super.afficher();
-        System.out.println("Le prix de ce séjour est de " + reductionFormatee + "€ (" + promotionFormatee + "€ de promotion).");
+        System.out.println("Le prix de ce séjour est de " + prix + "€ (" + promotion + "€ de promotion).");
     }
 }

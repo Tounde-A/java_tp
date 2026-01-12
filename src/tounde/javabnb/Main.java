@@ -45,7 +45,7 @@ public class Main {
         Sejour monSejour3 = new Sejour(maDate3, 7, appartement1, 3);
         Voyageur voyageur1 = new Voyageur("Sandra", "Wood", 30);
 
-        SejourLong monSejourLong1 = new SejourLong(maDate3, 7, appartement1, 3, 0.20);
+        SejourLong monSejourLong1 = new SejourLong(maDate3, 7, appartement1, 3, 20);
 
         Reservation maReservation1 = new Reservation(monSejour3, voyageur1);
         Reservation maReservation2 = new Reservation(monSejourLong1, voyageur1);
