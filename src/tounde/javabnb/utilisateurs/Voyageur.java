@@ -6,8 +6,8 @@ public class Voyageur extends Personne {
         super(paramPrenom, paramNom, paramAge);
     }
 
-    @Override
+
     public void afficher() {
-        super.afficher();
+        System.out.println(getPrenom() + " " + getNom() + " (" + getAge() + " ans)");
     }
 }

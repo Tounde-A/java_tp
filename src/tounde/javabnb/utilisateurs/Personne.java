@@ -13,7 +13,18 @@ public class Personne {
     }
 
     public void afficher() {
-        System.out.println(prenom + " " + nom + " (" + age + " ans)");
+        System.out.print(prenom + " " + nom + " (" + age + " ans)");
     }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }

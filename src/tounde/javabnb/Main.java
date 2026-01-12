@@ -3,6 +3,7 @@ package tounde.javabnb;
 import tounde.javabnb.logements.Appartement;
 import tounde.javabnb.logements.Logement;
 import tounde.javabnb.logements.Maison;
+import tounde.javabnb.reservations.Reservable;
 import tounde.javabnb.reservations.Reservation;
 import tounde.javabnb.reservations.Sejour;
 import tounde.javabnb.reservations.SejourLong;
