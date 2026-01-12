@@ -38,24 +38,23 @@ public class Main {
         Appartement appartement1 = new Appartement(hote2, 200, "16 rue Nationale, 37000 Tours", 1,50, 2, 0);
         Date maDate2 = new Date(126, Calendar.FEBRUARY, 12);
 
-        Sejour monSejour1 = new Sejour(maDate1, 3, maison1, 2);
-        Sejour monSejour2 = new Sejour(maDate2, 7, appartement1, 3);
+        //Sejour monSejour1 = new Sejour(maDate1, 3, maison1, 2);
+        //Sejour monSejour2 = new Sejour(maDate2, 7, appartement1, 3);
+        //Sejour monSejour3 = new Sejour(maDate3, 7, appartement1, 3);
 
         Date maDate3 = new Date(126, Calendar.JULY, 2);
-        Sejour monSejour3 = new Sejour(maDate3, 7, appartement1, 3);
         Voyageur voyageur1 = new Voyageur("Sandra", "Wood", 30);
-
         SejourLong monSejourLong1 = new SejourLong(maDate3, 7, appartement1, 3, 20);
 
-        Reservation maReservation1 = new Reservation(monSejour3, voyageur1);
+        //Reservation maReservation1 = new Reservation(monSejour3, voyageur1);
         Reservation maReservation2 = new Reservation(monSejourLong1, voyageur1);
 
         //System.out.println(" ");
         //monSejour1.afficher();
         //System.out.println(" ");
         //monSejour2.afficher();
-        System.out.println(" ");
-        maReservation1.afficher();
+        //System.out.println(" ");
+        //maReservation1.afficher();
         System.out.println(" ");
         maReservation2.afficher();
 

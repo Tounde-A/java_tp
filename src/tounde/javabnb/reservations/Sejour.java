@@ -6,12 +6,13 @@ import java.util.Date;
 
 import static tounde.javabnb.outils.Utile.formaterDate;
 
-public class Sejour implements Reservable {
+public abstract class Sejour implements Reservable {
 
     private Date dateArrivee;
     private int nbNuits;
     private Logement logement;
     private int nbVoyageurs;
+    protected int prix;
 
     public Sejour(Date paramDateArrivee, int paramNbNuits, Logement paramLogement, int paramNbVoyageurs) {
         dateArrivee = paramDateArrivee;
@@ -20,14 +21,11 @@ public class Sejour implements Reservable {
         nbVoyageurs = paramNbVoyageurs;
     }
 
+    public abstract void miseAJourDuPrixDuSejour();
+
     @Override
     public boolean aUneDateArriveeCorrecte() {
         return dateArrivee.after(new Date());
-    }
-
-    @Override
-    public boolean aUnNombreDeNuitsCorrect() {
-        return nbNuits >= 1 && nbNuits <= 31;
     }
 
     @Override
@@ -35,11 +33,7 @@ public class Sejour implements Reservable {
         return nbVoyageurs <= logement.getNbVoyageursMax();
     }
 
-    public void afficher() {
-        logement.afficher();
-        System.out.println("Nombre de nuits : " + nbNuits);
-        System.out.println("La date d'arrivée est le " + formaterDate(dateArrivee) + " pour " + nbNuits + " nuits.");
-    }
+    public abstract void afficher();
 
     public int getNbNuits() {
         return nbNuits;
