@@ -34,10 +34,7 @@ public class SejourLong extends Sejour{
         double reduction = prixTotal - promotionFormatee;
         int reductionFormatee = (int) reduction;
 
-
-        logement.afficher();
-        System.out.println("Nombre de nuits : " + getNbNuits());
-        System.out.println("La date d'arrivée est le " + formaterDate(getDateArrivee()) + " pour " + getNbNuits() + " nuits.");
+        super.afficher();
         System.out.println("Le prix de ce séjour est de " + reductionFormatee + "€ (" + promotionFormatee + "€ de promotion).");
     }
 }

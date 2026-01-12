@@ -39,7 +39,6 @@ public class Sejour implements Reservable {
         logement.afficher();
         System.out.println("Nombre de nuits : " + nbNuits);
         System.out.println("La date d'arrivée est le " + formaterDate(dateArrivee) + " pour " + nbNuits + " nuits.");
-        System.out.println("Le prix de ce séjour est de " + getNbNuits() * logement.getTarifParNuit() + " €");
     }
 
     public int getNbNuits() {

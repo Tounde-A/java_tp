@@ -17,9 +17,7 @@ public class SejourCourt extends Sejour{
 
     @Override
     public void afficher() {
-        logement.afficher();
-        System.out.println("Nombre de nuits : " + getNbNuits());
-        System.out.println("La date d'arrivée est le " + formaterDate(getDateArrivee()) + " pour " + getNbNuits() + " nuits.");
+        super.afficher();
         System.out.println("Le prix de ce séjour est de " + getNbNuits() * logement.getTarifParNuit() + "€");
     }
 }
